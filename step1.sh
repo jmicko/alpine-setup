@@ -8,14 +8,13 @@ apk -U upgrade
 setup-xorg-base
 
 # install the bare minimum
-apk add xfce4 xfce4-terminal xfce4-screensaver lightdm-gtk-greeter dbus elogind polkit-elogind gvfs udisks2 adwaita-icon-theme
+apk add adwaita-icon-theme bash bemenu dbus dmenu elogind eudev foot glib gvfs lightdm-gtk-greeter mesa-gl pipewire polkit-elogind qutebrowser seatd sway sway-doc swaybg swayidle swaylock swaylockd ttf-dejavu udisks2 waybar wofi xdg-desktop-portal xdg-desktop-portal-wlr xfce4 xfce4-screensaver xfce4-terminal xwayland zsh
 
 # add user, create wallpaper directory
 mkdir -p /home/bt/wallpaper
 
 # user setup bt
 cp ./bt/wallpaper/black-sand.jpg /home/bt/wallpaper/black-sand.jpg
-mkdir -p /home/bt/.scripts
 chown -R bt:bt /home/bt
 
 # add bt to sudoers
