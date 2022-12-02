@@ -10,6 +10,10 @@ setup-xorg-base
 # install the bare minimum
 apk add adwaita-icon-theme bash bemenu dbus dmenu elogind eudev foot glib gvfs lightdm-gtk-greeter mesa-gl pipewire polkit-elogind qutebrowser seatd sway sway-doc swaybg swayidle swaylock swaylockd ttf-dejavu udisks2 waybar wofi xdg-desktop-portal xdg-desktop-portal-wlr xfce4 xfce4-screensaver xfce4-terminal xwayland zsh
 
+adduser bt input
+adduser bt video
+adduser bt seat
+
 # add user, create wallpaper directory
 mkdir -p /home/bt/wallpaper
 
