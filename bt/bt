@@ -1,8 +1,0 @@
-[org.freedesktop.DisplayManager.AccountsService]
-BackgroundFile='/home/bt/wallpaper/black-sand.jpg'
-
-[User]
-Session=xfce
-XSession=sway
-Icon=/home/bt/.face
-SystemAccount=false

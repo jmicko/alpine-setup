@@ -1,3 +1,0 @@
-## Bradley Taunt
-bt ALL=(ALL) ALL
-bt ALL=(ALL) NOPASSWD: /sbin/poweroff, /sbin/reboot, /usr/sbin/openvpn, /bin/mount

@@ -1,7 +1,13 @@
 # alpine-linux-setup
-Alpine Linux Setup
 
-# Alpine Linux
+**Alpine Linux Setup**
+
+## What is This
+
+An absolutely bare-bones Sway Desktop Alpine installation.
+
+This is meant to be a minimal build to help you get started with Alpine Linux.
+
 ## Base Installation
 * download iso from internet
 * flash iso to USB drive
@@ -26,7 +32,7 @@ Alpine Linux Setup
 * `apk add git`
 * `git clone https://git.sr.ht/~bt/alpine-linux-setup`
 * `cd alpine-linux-setup`
-* `./setup.sh`
+* `./welcome.sh`
 
 
 ## Inspiration
