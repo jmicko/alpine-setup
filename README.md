@@ -32,7 +32,7 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 * `apk add git`
 * `git clone https://git.sr.ht/~bt/alpine-linux-setup`
 * `cd alpine-linux-setup`
-* `./welcome.sh`
+* `ash welcome.sh` or `ash setup.sh` if your repos are already set
 
 
 ## Inspiration

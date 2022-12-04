@@ -5,10 +5,10 @@ echo "========== Alpine Linux Setup  ================"
 echo "## creating new user (bt) ##"
 adduser -g "Bradley Taunt" bt
 adduser bt wheel
-apk add doas
+apk add sudo
 
-echo "## granting wheel group access to doas ##"
-cat ./bt/doas.conf >> /etc/doas.conf
+echo "## granting user bt access to sudo ##"
+cat ./bt/sudoers >> /etc/sudoers
 
 echo "## running setup-xorg-base ##"
 setup-xorg-base
@@ -17,12 +17,13 @@ echo "## installing helpful packages ##"
 apk add dbus pipewire util-linux pciutils usbutils coreutils binutils findutils grep iproute2
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
+apk add mesa-dri-gallium
+apk add dmenu
 
 echo "## installing sway and custom packages ##"
 apk add eudev
 setup-devd udev
-apk add mesa-dri-gallium
-apk add sway sway-doc xwayland foot bemenu swaylock swalockd swaybg swayidle ttf-dejavu elogind polkit-elogind qutebrowser aerc tut
+apk add sway sway-doc xwayland foot bemenu swaylock swaylockd swaybg swayidle ttf-dejavu elogind polkit-elogind qutebrowser aerc tut
 apk add seatd
 
 echo "## add user bt to proper groups ##"
