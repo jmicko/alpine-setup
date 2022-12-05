@@ -8,6 +8,10 @@ An absolutely bare-bones Sway Desktop Alpine installation.
 
 This is meant to be a minimal build to help you get started with Alpine Linux.
 
+## Before You Begin
+
+You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user that gets created during the installation process. Feel free to also look through the include dotfiles and tweak as you see fit.
+
 ## Base Installation
 * download iso from internet
 * flash iso to USB drive
