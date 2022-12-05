@@ -39,10 +39,9 @@ export QT_QPA_PLATFORM=wayland
 #export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
 
-if test -z "${XDG_RUNTIME_DIR}"; then
-  export XDG_RUNTIME_DIR=/tmp/$(id -u)-runtime-dir
-  if ! test -d "${XDG_RUNTIME_DIR}"; then
-    mkdir "${XDG_RUNTIME_DIR}"
-    chmod 0700 "${XDG_RUNTIME_DIR}"
-  fi
+mkdir -p /tmp/swaytmp
+export XDG_RUNTIME_DIR=/tmp/swaytmp
+# If running from tty1, start sway
+if [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
 fi
