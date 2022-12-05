@@ -30,6 +30,7 @@ adduser bt video
 echo "====================> Update main config files"
 cp -r ./bt/sway ~/.config/
 cp -r ./bt/waybar ~/.config/
+cp -r ./bt/alacritty ~/.config/
 cat ./bt/.profile >> /home/bt/.profile
 
 echo "====================> Configuring services to launch at boot"
