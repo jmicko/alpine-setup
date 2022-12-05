@@ -11,7 +11,7 @@ echo "====================> Running setup-xorg-base"
 setup-xorg-base
 
 echo "====================> Installing helpful packages"
-apk add xbps-install dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux pciutils usbutils coreutils binutils findutils grep iproute2 pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako python3 network-manager-applet kanshi clipman gnome-keyring micro vim
+apk add xbps-install dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux pciutils usbutils coreutils binutils findutils grep iproute2 pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako python3 network-manager-applet kanshi clipman gnome-keyring micro vim font-misc-misc
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
 apk add mesa-dri-gallium
