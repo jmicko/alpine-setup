@@ -33,6 +33,9 @@ cp -r ./bt/waybar ~/.config/
 cp -r ./bt/alacritty ~/.config/
 cat ./bt/.profile >> /home/bt/.profile
 
+echo "====================> Include default wallpaper"
+cp -r ./bt/wallpaper /home/bt/
+
 echo "====================> Configuring services to launch at boot"
 rc-update add seatd
 rc-service seatd start
