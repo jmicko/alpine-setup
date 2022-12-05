@@ -11,7 +11,7 @@ echo "====================> Running setup-xorg-base"
 setup-xorg-base
 
 echo "====================> Installing helpful packages"
-apk add xbps-install dbus pipewire linux-firmware wireless-tools iwd util-linux pciutils usbutils coreutils binutils findutils grep iproute2 pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako python3 network-manager-applet kanshi clipman gnome-keyring micro vim
+apk add xbps-install dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux pciutils usbutils coreutils binutils findutils grep iproute2 pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako python3 network-manager-applet kanshi clipman gnome-keyring micro vim
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
 apk add mesa-dri-gallium
@@ -20,7 +20,7 @@ apk add wofi
 echo "====================> Installing sway and custom packages"
 apk add eudev
 setup-devd udev
-apk add sway sway-doc xwayland alacritty nwg-drawer nwg-launchers-bar bemenu swaylock swaylockd swaybg swayidle ttf-dejavu elogind polkit-elogind autotiling qutebrowser aerc tut thunar
+apk add sway sway-doc xwayland alacritty nwg-drawer nwg-launchers-bar nwg-panel bemenu swaylock swaylockd swaybg swayidle ttf-dejavu elogind polkit-elogind autotiling qutebrowser aerc tut thunar zote
 apk add seatd
 
 echo "====================> Add user bt to proper groups"
