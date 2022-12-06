@@ -8,6 +8,30 @@ An absolutely bare-bones Sway Desktop Alpine installation.
 
 This is meant to be a minimal build to help you get started with Alpine Linux.
 
+## What You Get
+
+- swaywm
+- waybar
+- wofi
+- qutebrowser
+- alacritty
+- aerc-mail
+- tut
+- thunar
+- azote
+- curl
+- zsh
+- bash
+- pipwire
+- pulseaudio
+- clipman
+- python3
+- sudo
+- vim
+- micro
+
+..and a little bit more. Take a look through the `setup.sh` to see all included packages (and feel free to remove things you don't want/need!)
+
 ## Before You Begin
 
 You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user that gets created during the installation process. Feel free to also look through the include dotfiles and tweak as you see fit.
@@ -18,7 +42,7 @@ You will need to edit some of the content inside the `setup.sh` file. Most impor
 * run `setup-alpine` script:
     - us
     - us
-    - localhost
+    - [custom-hostname] 
     - eth0
     - EST
     - none
