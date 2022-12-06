@@ -44,6 +44,7 @@ cp -r ./bt/nwg-drawer /home/bt/.config/
 cp -r ./bt/nwg-launchers /home/bt/.config/
 cp -r ./bt/nwg-look /home/bt/.config/
 cp -r ./bt/wofi /home/bt/.config/
+cp -r ./bt/mimeapps.list /etc/xdg/
 cat ./bt/.profile >> /home/bt/.profile
 
 echo "====================> Include default wallpaper"
