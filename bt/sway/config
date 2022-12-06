@@ -37,7 +37,7 @@ output * bg /home/bt/wallpaper/blacksand.jpg fill
 ### Idle configuration
 #
 set $laptop eDP-1
-set $lock 'swaylock -f -c 000000'
+set $lock 'swaylock -f -C ~/.config/swaylock/config'
 
 bindswitch --reload --locked lid:on output $laptop disable
 bindswitch --reload --locked lid:off output $laptop enable

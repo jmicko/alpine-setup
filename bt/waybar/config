@@ -5,7 +5,7 @@
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
     "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    "modules-right": ["backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock"], 
     
  // Modules configuration
  
@@ -109,11 +109,6 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/power": {
-      	"format":"⏻",
-       	"on-click": "nwg-bar",
-      	"tooltip": false,
-   },
    "custom/keyboard-layout": {
       	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
       	// Interval set only as a fallback, as the value is updated by signal
