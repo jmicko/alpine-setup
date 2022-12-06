@@ -39,6 +39,7 @@ cp -r ./bt/sway /home/bt/.config/
 cp -r ./bt/waybar /home/bt/.config/
 cp -r ./bt/alacritty /home/bt/.config/
 cp -r ./bt/qutebrowser /home/bt/.config/
+cp -r ./bt/wofi /home/bt/.config/
 cat ./bt/.profile >> /home/bt/.profile
 
 echo "====================> Include default wallpaper"
