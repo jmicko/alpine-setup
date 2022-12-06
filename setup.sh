@@ -24,6 +24,7 @@ apk add wofi
 echo "====================> Installing sway and custom packages"
 apk add eudev
 setup-devd udev
+apk add nwg-launchers-bar
 apk add sway sway-doc xwayland 
 apk add alacritty swaylock swaylockd swaybg swayidle 
 apk add ttf-dejavu elogind polkit-elogind autotiling 
@@ -39,6 +40,9 @@ cp -r ./bt/sway /home/bt/.config/
 cp -r ./bt/waybar /home/bt/.config/
 cp -r ./bt/alacritty /home/bt/.config/
 cp -r ./bt/qutebrowser /home/bt/.config/
+cp -r ./bt/nwg-drawer /home/bt/.config/
+cp -r ./bt/nwg-launchers /home/bt/.config/
+cp -r ./bt/nwg-look /home/bt/.config/
 cp -r ./bt/wofi /home/bt/.config/
 cat ./bt/.profile >> /home/bt/.profile
 
