@@ -11,7 +11,11 @@ echo "====================> Running setup-xorg-base"
 setup-xorg-base
 
 echo "====================> Installing helpful packages"
-apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux pciutils usbutils coreutils binutils findutils grep iproute2 pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako python3 network-manager-applet kanshi clipman gnome-keyring micro vim font-misc-misc
+apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux 
+apk add pciutils usbutils coreutils binutils findutils grep iproute2 
+apk add pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako 
+apk add python3 network-manager-applet kanshi clipman gnome-keyring micro vim font-misc-misc font-awesome
+apk add curl zsh light
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
 apk add mesa-dri-gallium
@@ -20,7 +24,10 @@ apk add wofi
 echo "====================> Installing sway and custom packages"
 apk add eudev
 setup-devd udev
-apk add sway sway-doc xwayland alacritty bemenu swaylock swaylockd swaybg swayidle ttf-dejavu elogind polkit-elogind autotiling qutebrowser aerc tut thunar azote
+apk add sway sway-doc xwayland 
+apk add alacritty swaylock swaylockd swaybg swayidle 
+apk add ttf-dejavu elogind polkit-elogind autotiling 
+apk add qutebrowser aerc tut thunar azote
 apk add seatd
 
 echo "====================> Add user bt to proper groups"
@@ -28,10 +35,10 @@ adduser bt input
 adduser bt video
 
 echo "====================> Update main config files"
-cp -r ./bt/sway/config ~/.config/sway
-cp -r ./bt/waybar ~/.config/
-cp -r ./bt/alacritty ~/.config/
-cp -r ./bt/qutebrowser ~/.config/
+cp -r ./bt/sway /home/bt/.config/
+cp -r ./bt/waybar /home/bt/.config/
+cp -r ./bt/alacritty /home/bt/.config/
+cp -r ./bt/qutebrowser /home/bt/.config/
 cat ./bt/.profile >> /home/bt/.profile
 
 echo "====================> Include default wallpaper"

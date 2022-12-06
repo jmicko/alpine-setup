@@ -12,15 +12,21 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
+set $browser qutebrowser
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu bemenu
+set $menu wofi --show drun
+
+font pango:monospace 8
+font pango:DejaVu Sans Mono 8
+
+exec mako
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg /home/bt/wallpaper/blacksand.jpg fill
 #
 # Example configuration:
 #
@@ -30,16 +36,24 @@ output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
 ### Idle configuration
 #
-# Example configuration:
-#
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-#          before-sleep 'swaylock -f -c 000000'
-#
+set $laptop eDP-1
+set $lock 'swaylock -f -c 000000'
+
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+exec swayidle -w \
+    timeout 300 $lock \
+    timeout 770 'swaymsg "output * dpms off"' \
+    resume 'swaymsg "output * dpms on"' \
+    before-sleep $lock
+
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+## Lock Screen
+bindsym $mod+Alt+minus exec $lock
 
 ### Input configuration
 #
@@ -61,6 +75,9 @@ output * bg @datadir@/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    
+    # Open qutebrowser
+    bindsym $mod+o exec $browser
 
     # Kill focused window
     bindsym $mod+q kill
@@ -200,6 +217,11 @@ bindsym $mod+r mode "resize"
     bindsym XF86AudioLowerVolume exec pamixer -ud 2 && pamixer --get-volume > $SWAYSOCK.wob
     bindsym XF86AudioMute exec pamixer --toggle-mute && ( pamixer --get-mute && echo 0 > $SWAYSOCK.wob ) || pamixer --get-volume > $SWAYSOCK.wob
 
+#
+# Backlight
+#
+bindsym XF86MonBrightnessUp exec sudo light -A 10
+bindsym XF86MonBrightnessDown exec sudo light -U 10
 #
 # Status Bar:
 #

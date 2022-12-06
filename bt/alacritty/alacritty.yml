@@ -65,10 +65,10 @@ window:
     y: 20
 font:
   normal:
-    family: JetbrainsMonoNL
+    family: DejaVu Sans Mono
     style: Regular
-  size: 16
+  size: 12
 live_config_reload: true
 dynamic_padding: true
 shell:
-   program: /bin/bash
+   program: /bin/zsh

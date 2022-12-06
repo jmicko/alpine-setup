@@ -5,7 +5,7 @@
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
     "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["custom/pacman", "backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
+    "modules-right": ["backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock","custom/power"], 
     
  // Modules configuration
  
@@ -51,11 +51,11 @@
         "interval": 1
     },
     "cpu": {
-        "format": "﬙ {usage: >3}%",
+        "format": "CPU {usage: >3}%",
         "on-click": "alacritty -e htop"
     },
     "memory": {
-        "format": " {: >3}%",
+        "format": "MEM {: >3}%",
         "on-click": "alacritty -e htop"
     },
     "temperature": {
