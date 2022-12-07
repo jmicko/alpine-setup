@@ -26,9 +26,10 @@ apk add eudev
 setup-devd udev
 apk add nwg-launchers-bar
 apk add sway sway-doc xwayland 
-apk add alacritty swaylock swaylockd swaybg swayidle 
+apk add swaylock swaylockd swaybg swayidle 
 apk add ttf-dejavu elogind polkit-elogind autotiling 
 apk add qutebrowser aerc tut thunar azote
+apk add foot
 apk add seatd
 
 echo "====================> Add user bt to proper groups"
@@ -38,7 +39,7 @@ adduser bt video
 echo "====================> Update main config files"
 cp -r ./bt/sway /home/bt/.config/
 cp -r ./bt/waybar /home/bt/.config/
-cp -r ./bt/alacritty /home/bt/.config/
+cp -r ./bt/foot /home/bt/.config/
 cp -r ./bt/qutebrowser /home/bt/.config/
 cp -r ./bt/nwg-drawer /home/bt/.config/
 cp -r ./bt/nwg-launchers /home/bt/.config/

@@ -14,12 +14,13 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 - waybar
 - wofi
 - qutebrowser
-- alacritty
+- foot
 - aerc-mail
 - tut
 - thunar
 - azote
 - curl
+- gawk 
 - zsh
 - bash
 - pipwire
