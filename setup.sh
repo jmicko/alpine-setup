@@ -15,7 +15,7 @@ apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware w
 apk add pciutils usbutils coreutils binutils findutils grep iproute2 
 apk add pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako 
 apk add python3 network-manager-applet kanshi clipman gnome-keyring micro vim font-misc-misc font-awesome
-apk add curl zsh light gawk
+apk add curl zsh light gawk grim slurp
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
 apk add mesa-dri-gallium
