@@ -14,7 +14,7 @@ echo "====================> Installing helpful packages"
 apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux 
 apk add pciutils usbutils coreutils binutils findutils grep iproute2 
 apk add pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako 
-apk add python3 network-manager-applet kanshi clipman gnome-keyring micro vim font-misc-misc font-awesome
+apk add python3 network-manager-applet kanshi clipman gnome-tweaks gnome-keyring micro vim font-misc-misc font-awesome
 apk add curl zsh light gawk grim slurp feh
 apk add bash bash-doc bash-completion
 apk add udisks2 udisks2-doc
