@@ -11,7 +11,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 set $browser qutebrowser
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
@@ -222,6 +222,27 @@ bindsym $mod+r mode "resize"
 #
 bindsym XF86MonBrightnessUp exec sudo light -A 10
 bindsym XF86MonBrightnessDown exec sudo light -U 10
+
+#
+# Screen capture
+#
+set $screenshot 1 selected, 2 whole, 3 selected clipboard, 4 whole clipboard, 5 swappy
+mode "$screenshot" {
+    bindsym 1 exec 'grim -g "$(slurp)" ~/ps_$(date +"%Y%m%d%H%M%S").png', mode "default"
+    bindsym 2 exec 'grim ~/ps_$(date +"%Y%m%d%H%M%S").png', mode "default"
+    bindsym 3 exec 'grim -g "$(slurp)" - | wl-copy', mode "default"
+    bindsym 4 exec 'grim - | wl-copy', mode "default"
+    bindsym 5 exec 'grim -g "$(slurp)" - | swappy -f -', mode "default"
+
+# back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Alt+p mode "default"
+}
+
+bindsym $mod+Alt+p mode "$screenshot"
+
+
 #
 # Status Bar:
 #
@@ -229,5 +250,12 @@ bindsym XF86MonBrightnessDown exec sudo light -U 10
 bar {
     swaybar_command waybar
 }
+
+xwayland enable
+
+#
+# Default to floating windows
+#
+for_window [app_id=".*"] floating enable
 
 include @sysconfdir@/sway/config.d/*
