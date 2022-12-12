@@ -10,6 +10,8 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 
 ## What You Get
 
+![initial login screen](screenshot.png)
+
 - swaywm
 - waybar
 - wofi
