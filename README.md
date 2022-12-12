@@ -10,8 +10,7 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 
 ## What You Get
 
-![initial login
-screen](https://git.sr.ht/~bt/alpine-linux-setup/tree/master/item/screenshot.jpg)
+![initial login](/~bt/alpine-linux-setup/blob/master/screenshot.jpg)
 
 - swaywm
 - waybar
