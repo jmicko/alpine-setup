@@ -5,7 +5,13 @@ echo "========== Alpine Linux Setup  ================"
 echo "====================> Add sudo & create new user (bt)"
 apk add sudo
 adduser -g "Bradley Taunt" bt
+
+echo "====================> Add user bt to proper groups"
 adduser bt wheel
+adduser bt input
+adduser bt video
+
+cp -r ./bt/sudoers /etc/sudoers
 
 echo "====================> Running setup-xorg-base"
 setup-xorg-base
@@ -32,12 +38,9 @@ apk add qutebrowser aerc tut thunar azote
 apk add foot
 apk add seatd
 
-echo "====================> Add user bt to proper groups"
-adduser bt input
-adduser bt video
-
 echo "====================> Update main config files"
 cp -r ./bt/sway /home/bt/.config/
+cp -r ./bt/swaylock /home/bt/.config/
 cp -r ./bt/waybar /home/bt/.config/
 cp -r ./bt/foot /home/bt/.config/
 cp -r ./bt/qutebrowser /home/bt/.config/
@@ -59,9 +62,6 @@ rc-service dbus start
 rc-update add dbus
 rc-service iwd start
 rc-update add iwd
-
-echo "====================> Optional: Connect to a wifi hotspot"
-iwctl station wlan0 connect bchhh
 
 echo "====================>  Setup complete"
 echo "You can now reboot your machine."
