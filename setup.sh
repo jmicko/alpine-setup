@@ -31,6 +31,7 @@ echo "====================> Installing sway and custom packages"
 apk add eudev
 setup-devd udev
 apk add nwg-launchers-bar
+apk add waybar
 apk add sway sway-doc xwayland 
 apk add swaylock swaylockd swaybg swayidle 
 apk add ttf-dejavu elogind polkit-elogind autotiling 

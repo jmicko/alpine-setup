@@ -53,7 +53,7 @@ nord15 #b48ead
    }
 
 window#waybar {
-    background:#2e3440;
+    background:#010101;
 }
 
 #workspaces button {
@@ -83,7 +83,10 @@ window#waybar {
  * Module styles
  * -------------------------------------------------------------------------- */
 
- 
+#window {
+ padding-top: 4px;
+}
+
 #clock {
  color:#a3be8c;
 }

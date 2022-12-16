@@ -4,7 +4,7 @@
     "height": 30,
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
-    "modules-left": ["custom/launcher","sway/workspaces", "sway/mode", "sway/window"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
     "modules-right": ["backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock"], 
     
  // Modules configuration
@@ -43,9 +43,9 @@
     },
     "clock": {
         "tooltip-format": "{:%A %B %d %Y | %H:%M}",
-        "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
-        //"format": " {:%a %d %b  %H:%M}",	//24 hour format
-        "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
+        "format": " {:%a %d %b / %I:%M %p}",	//12 hour format
+        //"format": " {:%a %d %b / %H:%M}",	//24 hour format
+        "format-alt": " {:%d/%m/%Y / %H:%M:%S}",
         //"timezones": [ "Kolkata" ],
         //"max-length": 200
         "interval": 1
