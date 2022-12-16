@@ -8,7 +8,7 @@ echo "========== Alpine Linux Setup  ================"
 echo "====================> Create new user"
 adduser -g "$ALPNAME" $ALPUSER
 
-echo "====================> Add user bt to proper groups"
+echo "====================> Add user $ALPUSER to proper groups"
 adduser $ALPUSER wheel
 adduser $ALPUSER input
 adduser $ALPUSER video
@@ -54,7 +54,7 @@ cp -r wallpaper /home/$ALPUSER/
 echo "====================> Configuring services to launch at boot"
 rc-update add seatd
 rc-service seatd start
-adduser bt seat
+adduser $ALPUSER seat
 rc-service dbus start
 rc-update add dbus
 rc-service iwd start
