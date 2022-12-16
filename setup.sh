@@ -1,25 +1,27 @@
-#!/bin/ash
+#!/bin/bash
+
+ALPUSER="bt"
+ALPNAME="Bradley Taunt"
 
 echo "========== Alpine Linux Setup  ================"
 
-echo "====================> Add sudo & create new user (bt)"
-apk add sudo
-adduser -g "Bradley Taunt" bt
+echo "====================> Create new user"
+adduser -g "$ALPNAME" $ALPUSER
 
 echo "====================> Add user bt to proper groups"
-adduser bt wheel
-adduser bt input
-adduser bt video
-
-cp -r ./bt/sudoers /etc/sudoers
+adduser $ALPUSER wheel
+adduser $ALPUSER input
+adduser $ALPUSER video
+adduser $ALPUSER audio
 
 echo "====================> Running setup-xorg-base"
 setup-xorg-base
 
 echo "====================> Installing helpful packages"
-apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr pipewire linux-firmware wireless-tools iwd util-linux 
+apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr linux-firmware wireless-tools iwd util-linux
 apk add pciutils usbutils coreutils binutils findutils grep iproute2 
-apk add pulseaudio pulseaudio-alsa pavucontrol pamixer playerctl bluez mako 
+apk add pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol pamixer playerctl
+apk add bluez mako 
 apk add python3 network-manager-applet kanshi clipman gnome-tweaks gnome-keyring micro vim font-misc-misc ttf-font-awesome
 apk add terminus-font ttf-inconsolata
 apk add curl zsh light gawk grim slurp feh
@@ -41,20 +43,12 @@ apk add foot
 apk add seatd
 
 echo "====================> Update main config files"
-cp -r bt/sway /home/bt/.config/
-cp -r bt/swaylock /home/bt/.config/
-cp -r bt/waybar /home/bt/.config/
-cp -r bt/foot /home/bt/.config/
-cp -r bt/qutebrowser /home/bt/.config/
-cp -r bt/nwg-drawer /home/bt/.config/
-cp -r bt/nwg-launchers /home/bt/.config/
-cp -r bt/nwg-look /home/bt/.config/
-cp -r bt/wofi /home/bt/.config/
-cp -r bt/mimeapps.list /etc/xdg/
-cat bt/.profile >> /home/bt/.profile
+cp -r configs/* /home/$ALPUSER/.config/
+cp -r mimeapps.list /etc/xdg/
+cat .profile >> /home/$ALPUSER/.profile
 
 echo "====================> Include default wallpaper"
-cp -r bt/wallpaper /home/bt/
+cp -r configs/wallpaper /home/$ALPUSER/
 
 echo "====================> Configuring services to launch at boot"
 rc-update add seatd

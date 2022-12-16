@@ -37,7 +37,7 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 
 ## Before You Begin
 
-You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user that gets created during the installation process. Feel free to also look through the include dotfiles and tweak as you see fit.
+You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user and name that gets created during the installation process. Feel free to also look through the include dotfiles and tweak as you see fit.
 
 ## Base Installation
 * download iso from internet
@@ -60,10 +60,14 @@ You will need to edit some of the content inside the `setup.sh` file. Most impor
 
 ## Auto Personalization
 * login as `root`
+* `apk add vim`
+* edit `/etc/apk/repositories` and give access to all repos
+* `apk add sudo bash`
+* edit `/etc/sudoers` and give `:wheel` group full access
 * `apk add git`
 * `git clone https://git.sr.ht/~bt/alpine-linux-setup`
 * `cd alpine-linux-setup`
-* `ash welcome.sh` or `ash setup.sh` if your repos are already set
+* `ash setup.sh` if your repos are already set
 
 
 ## Inspiration
