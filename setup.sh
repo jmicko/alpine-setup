@@ -43,12 +43,13 @@ apk add foot
 apk add seatd
 
 echo "====================> Update main config files"
+mkdir /home/$ALPUSER/.config/
 cp -r configs/* /home/$ALPUSER/.config/
 cp -r mimeapps.list /etc/xdg/
 cat .profile >> /home/$ALPUSER/.profile
 
 echo "====================> Include default wallpaper"
-cp -r configs/wallpaper /home/$ALPUSER/
+cp -r wallpaper /home/$ALPUSER/
 
 echo "====================> Configuring services to launch at boot"
 rc-update add seatd
