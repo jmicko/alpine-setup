@@ -66,19 +66,27 @@ window#waybar {
 }
 
 #workspaces button.focused {
-    border-color: #81a1c1;
+	background: #2d2d2d;
+}
+
+button:hover {
+	background: #2d2d2d;
+	border: 0;
+	box-shadow: inherit;
+	padding: 0;
+	text-shadow: inherit;
 }
 
 #mode {
     color: #ebcb8b;
 }
 
-#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #pulseaudio, #mode, #tray, #window,#custom-launcher,#custom-power,#custom-pacman {
+#clock, #battery, #cpu, #memory,#idle_inhibitor, #temperature,#custom-keyboard-layout, #backlight, #network, #alsa, #mode, #tray, #window,#custom-launcher,#custom-power,#custom-pacman,#custom-alsa {
     padding: 0 3px;
     border-bottom: 2px;
     border-style: solid;
 }
- 
+
 /* -----------------------------------------------------------------------------
  * Module styles
  * -------------------------------------------------------------------------- */
@@ -140,14 +148,6 @@ window#waybar {
     color: #bf616a;
 }
 
-#pulseaudio {
-    color: #b48ead;
-}
-
-#pulseaudio.muted {
-    color: #3b4252;
-}
-
 #temperature {
     color: #8fbcbb;
 }
@@ -166,6 +166,10 @@ window#waybar {
 #custom-launcher,#custom-power{
     border-style: hidden;
     margin-top:2px;    
+}
+
+#custom-alsa {
+	color: orange;
 }
 
 #window{

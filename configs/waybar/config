@@ -5,7 +5,7 @@
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
     "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
-    "modules-right": ["backlight", "cpu", "memory", "battery", "pulseaudio","tray", "idle_inhibitor", "clock"], 
+    "modules-right": ["backlight", "cpu", "memory", "network", "custom/alsa", "battery", "tray", "idle_inhibitor", "clock"], 
     
  // Modules configuration
  
@@ -91,23 +91,16 @@
         // "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
         "format-ethernet": " {ifname}",
         "format-disconnected": "⚠ Disconnected",
-        "on-click": "alacritty -e nmtui"
+        "on-click": "foot -e nmtui"
     },
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon} {volume: >3}%",
-        "format-bluetooth": "{icon} {volume: >3}%",
-        "format-muted":"🔊 muted",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["🔊", "🔊"]
-        },
-        "on-click": "pavucontrol"
+    "custom/alsa": {
+        "exec": "amixer get Master | sed -nre 's/.*\\[off\\].*/      muted/p; s/.*\\[(.*%)\\].*/    \\1/p'",
+        "on-click": "amixer set Master toggle; pkill -x -RTMIN+11 waybar",
+        "on-scroll-up": "amixer set Master 1+; pkill -x -RTMIN+11 waybar",
+        "on-scroll-down": "amixer set Master 1-; pkill -x -RTMIN+11 waybar",
+        "signal": 11,
+        "interval": 10,
+        "tooltip": false
     },
    "custom/keyboard-layout": {
       	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",

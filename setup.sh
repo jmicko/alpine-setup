@@ -20,7 +20,7 @@ setup-xorg-base
 echo "====================> Installing helpful packages"
 apk add dbus xdg-desktop-portal xdg-desktop-portal-wlr linux-firmware wireless-tools iwd util-linux
 apk add pciutils usbutils coreutils binutils findutils grep iproute2 
-apk add pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol pamixer playerctl
+apk add alsa-utils alsa-utils-doc alsa-lib alsaconf alsa-ucm-conf 
 apk add bluez mako 
 apk add python3 network-manager-applet kanshi clipman gnome-tweaks gnome-keyring micro vim font-misc-misc ttf-font-awesome
 apk add terminus-font ttf-inconsolata
@@ -59,6 +59,8 @@ rc-service dbus start
 rc-update add dbus
 rc-service iwd start
 rc-update add iwd
+rc-service alsa start
+rc-update add alsa
 
 echo "====================>  Setup complete"
 echo "You can now reboot your machine."
