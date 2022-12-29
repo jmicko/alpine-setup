@@ -26,7 +26,7 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 - zsh
 - bash
 - pipwire
-- pulseaudio
+- alsa 
 - clipman
 - python3
 - sudo
