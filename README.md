@@ -35,9 +35,11 @@ This is meant to be a minimal build to help you get started with Alpine Linux.
 
 ..and a little bit more. Take a look through the `setup.sh` to see all included packages (and feel free to remove things you don't want/need!)
 
+Most of the config files can be used on other linux distros, just be sure to install the appropriate packages. Notably if running ubuntu, you will need to compile nwg-launchers from source... but if you're running ubuntu, how did you even get here? :)
+
 ## Before You Begin
 
-You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user and name that gets created during the installation process. Feel free to also look through the include dotfiles and tweak as you see fit.
+You will need to edit some of the content inside the `setup.sh` file. Most importantly, changing the default user and name that gets created during the installation process. Make sure to also change the directory where the backgroud image is coppied to (change jmicko to your new username). Feel free to also look through the include dotfiles and tweak as you see fit.
 
 ## Base Installation
 * download iso from internet
@@ -72,7 +74,11 @@ You will need to edit some of the content inside the `setup.sh` file. Most impor
 
 ## Inspiration
 
-Heavily taken/inspired from both:
+Originally forked from
+
+- [https://git.sr.ht/~bt/alpine-linux-setup](https://git.sr.ht/~bt/alpine-linux-setup)
+
+Which was in turn heavily taken/inspired from both:
 
 - [https://github.com/ibuetler/alpine-linux-setup](https://github.com/ibuetler/alpine-linux-setup)
 - [https://github.com/git-sgmoore/AlpineLinux-DailyDriverDesktop](https://github.com/git-sgmoore/AlpineLinux-DailyDriverDesktop)

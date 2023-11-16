@@ -4,7 +4,7 @@
     "height": 30,
     //"width": 1350, // Waybar width
     // Choose the order of the modules idle_inhibitor
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
     "modules-right": ["backlight", "cpu", "memory", "network", "custom/alsa", "battery", "tray", "idle_inhibitor", "clock"], 
     
  // Modules configuration
@@ -103,18 +103,18 @@
         "tooltip": false
     },
    "custom/keyboard-layout": {
-      	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
-      	// Interval set only as a fallback, as the value is updated by signal
-      	"interval": 30,
-      	"format": "  {}", // Icon: keyboard
-      	// Signal sent by Sway key binding (~/.config/sway/key-bindings)
-      	"signal": 1, // SIGHUP
-      	"tooltip": false,
+	"exec": "swaymsg -t get_inputs | grep -m1 'xkb_active_layout_name' | cut -d '\"' -f4",
+	// Interval set only as a fallback, as the value is updated by signal
+	"interval": 30,
+	"format": "  {}", // Icon: keyboard
+	// Signal sent by Sway key binding (~/.config/sway/key-bindings)
+	"signal": 1, // SIGHUP
+	"tooltip": false,
         "on-click": "~/.config/waybar/scripts/keyhint.sh",
-},
+    },
      "custom/launcher": {
-    	"format":" ",
-    	"on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
-    	"tooltip": false,
+	"format":" ",
+	"on-click": "exec nwggrid -c 7 -is 70 -spacing 23",
+	"tooltip": false,
 },
 }

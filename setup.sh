@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ALPUSER="bt"
-ALPNAME="Bradley Taunt"
+ALPUSER="jmicko"
+ALPNAME="John Micko"
 
 echo "========== Alpine Linux Setup  ================"
 

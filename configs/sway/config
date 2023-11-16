@@ -4,7 +4,7 @@
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
-set $mod Mod4
+set $mod Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -12,7 +12,7 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term foot
-set $browser qutebrowser
+#set $browser qutebrowser
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -26,7 +26,7 @@ exec mako
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output * bg /home/bt/wallpaper/blacksand.jpg fill
+output * bg /home/jmicko/wallpaper/blacksand.jpg fill
 #
 # Example configuration:
 #
@@ -53,7 +53,7 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ## Lock Screen
-bindsym $mod+Alt+minus exec $lock
+bindsym $mod+Mod4+minus exec $lock
 
 ### Input configuration
 #
@@ -237,10 +237,10 @@ mode "$screenshot" {
 # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+Alt+p mode "default"
+    bindsym $mod+Mod4+p mode "default"
 }
 
-bindsym $mod+Alt+p mode "$screenshot"
+bindsym $mod+Mod4+p mode "$screenshot"
 
 
 #
@@ -256,6 +256,6 @@ xwayland enable
 #
 # Default to floating windows
 #
-for_window [app_id=".*"] floating enable
+#for_window [app_id=".*"] floating enable
 
 include @sysconfdir@/sway/config.d/*
